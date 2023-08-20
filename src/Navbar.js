@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          Navbar
+        <img src="images/AEFAF-removebg.png" alt="Navbar Logo" className="navbar-logo"/>
         </Link>
         <button
           className="navbar-toggler"
@@ -27,7 +27,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about-us" className="nav-link">
+              <Link to="/about" className="nav-link">
                 About Me
               </Link>
             </li>

@@ -1,39 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 :root {
     --font: 'Spartan', sans-serif;
-    --white: #FCFBF7; 
+    /* --cute-font: 'Pacifico', cursive; */
 }
 
-* {
-    margin: 0; 
+body, .main-wrapper {
+    background-color: #f8f9fa;
+    margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-header {
-    width: 100%; 
-    height: 70vh;  /* Adjusted the height */
-    position: relative; 
-    overflow: hidden; 
-    background-color: var(--white);
+.home {
+    width: 100%;
+    height: 100vh;  /* Adjusted to fill the whole screen */
+    position: relative;
+    overflow: hidden;
+    background-color: #f8f9fa;
 }
 
 h1 {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
+    position: absolute;
+    top: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1; 
-    font-size: calc(1rem + 7vw); 
-    font-family: var(--font); 
-    text-align: center;  /* Centered text */
+    z-index: 1;
+    font-size: clamp(1.5rem, calc(1rem + 7vw), 4rem);
+    font-family: var(--font);
+    text-align: center;
+}
+
+.home p.lead {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: clamp(0.8rem, calc(0.4rem + 2vw), 2rem);  /* Adjusted to be smaller */
+    font-family: var(--cute-font);  /* Using the new cute font */
+    text-align: center;
+    width: 80%;
 }
 
 .line {
-    position: absolute; 
-    border-radius: 1em; 
-    animation-duration: 1s; 
+    position: absolute;
+    border-radius: 1em;
+    animation-duration: 1s;
 }
 
 .line-wide {
@@ -48,20 +62,30 @@ h1 {
 
 @keyframes change-width {
     0% {
-        transform: scaleX(0); 
+        transform: scaleX(0);
     }
-
     100% {
-        transform: scaleX(1);  
+        transform: scaleX(1);
     }
-} 
+}
 
 @keyframes change-height {
     0% {
-        transform: scaleY(0); 
+        transform: scaleY(0);
     }
-
     100% {
-        transform: scaleY(1);  
+        transform: scaleY(1);
     }
-} 
+}
+
+.navbar-logo {
+    width: 15%;
+    max-width: 500px;
+    min-width: 50px;
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        width: 25%;
+    }
+}
